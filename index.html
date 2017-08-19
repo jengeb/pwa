@@ -4,15 +4,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Button PWA</title>
+  <title>Counter PWA</title>
   <link rel="stylesheet" type="text/css" href="TODO">
   <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Counter PWA">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
 </head>
 <body>
   <header class="header">
-    <h1 class="header__title">Button PWA</h1>
-    <button id="butRefresh" class="headerButton"></button>
-    <button id="butAdd" class="headerButton"></button>
+    <h1 class="header__title">Counter PWA</h1>
+    <button id="butRefresh" class="headerCounter"></button>
+    <button id="butAdd" class="headerCounter"></button>
   </header>
 
   <main class="main">
