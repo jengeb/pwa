@@ -5,8 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Counter PWA</title>
-  <link rel="stylesheet" type="text/css" href="TODO">
+  <link rel="stylesheet" type="text/css" href="styles/inline.css">
   <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Add to home screen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -16,15 +17,26 @@
 <body>
   <header class="header">
     <h1 class="header__title">Counter PWA</h1>
-    <button id="butRefresh" class="headerCounter"></button>
-    <button id="butAdd" class="headerCounter"></button>
+    <button id="butRefresh">
+      <i class="fa fa-refresh" aria-hidden="true"></i>
+    </button>
+    <button id="butAdd">
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </button>
   </header>
 
   <main class="main">
     <div class="card cardTemplate" hidden></div>
   </main>
 
-  <div class="dialog-container"></div>
+  <div class="dialog-buttons">
+    <button id="" class="button">Add</button>
+    <button id="" class="button">Cancel</button>
+  </div>
+
+  <div>
+    Test
+  </div>
 
   <div class="loader">
     <svg viewBox="0 0 32 32" width="32" height="32">
@@ -32,6 +44,6 @@
     </svg>
   </div>
 
-  <!-- Insert link to app.js here -->
+  <script src="scripts/app.js" async></script>
 </body>
 </html>
