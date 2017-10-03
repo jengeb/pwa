@@ -1,6 +1,7 @@
-var cacheName = 'counterPWA';
-var dataCacheName = 'counterData-v1';
-var filesToCache = [
+'use strict';
+const cacheName = 'counterPWA-v1';
+const dataCacheName = 'counterData-v1';
+const filesToCache = [
   '/',
   '/index.html',
   '/scripts/app.js',
