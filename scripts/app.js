@@ -21,4 +21,11 @@ if ('serviceWorker' in navigator) {
     .catch(function(err) {
       console.log('Service Worker not registered', err);
     });
+
+  serviceWorkerRegistration.pushManager
+    .subscribe()
+    .then((endpoint) => {
+      // TODO
+      // endpoint to send push notifications
+    });
 }

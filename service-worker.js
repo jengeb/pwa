@@ -42,7 +42,7 @@ self.addEventListener('activate', e => {
 });
 
 // TODO which offline strategy to choose
-// get cache or fall back to network request
+// getting cache or falling back to network
 self.addEventListener('fetch', e => {
   console.log('[ServiceWorker] Fetch', e.request.url);
   e.respondWith(
@@ -54,4 +54,13 @@ self.addEventListener('fetch', e => {
         console.error(err);
       });
   );
+});
+
+self.addEventListener('push', e => {
+  // TODO
+});
+
+self.registration.showNotification('Notification', {
+  body: 'You received a notification.',
+  icon: ''
 });
