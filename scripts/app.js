@@ -11,6 +11,7 @@
 }();
 
 
+// register JS file containing access to Service Worker
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('./service-worker.js')

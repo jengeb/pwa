@@ -24,11 +24,11 @@ self.addEventListener('install', e => {
   );
 });
 
+// get triggered when installation has finished
 self.addEventListener('activate', e => {
   console.log('[ServiceWorker] Activate');
   e.waitUntil(
     caches.keys().then(keyList => {
-      // keyList.forEach(key => {}) // alternative
       return Promise.all(keyList.map(key => {
         if (key !== cacheName) {
           console.log('[ServiceWorker] Removing old cache', key);
@@ -37,14 +37,21 @@ self.addEventListener('activate', e => {
       }));
     })
   );
+  // activate ServiceWorker even though another one is already running
   return self.clients.claim();
 });
 
+// TODO which offline strategy to choose
+// get cache or fall back to network request
 self.addEventListener('fetch', e => {
   console.log('[ServiceWorker] Fetch', e.request.url);
   e.respondWith(
-    caches.match(e.request).then(response => {
-      return response || fetch(e.request);
-    })
+    caches.match(e.request)
+      .then(response => {
+        return response || fetch(e.request);
+      })
+      .catch(err => {
+        console.error(err);
+      });
   );
 });
