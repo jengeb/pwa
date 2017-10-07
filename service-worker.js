@@ -51,8 +51,8 @@ self.addEventListener('fetch', e => {
       })
       .catch(err => {
         console.error(err);
-      });
-  );
+      })
+    );
 });
 
 self.addEventListener('push', e => {
