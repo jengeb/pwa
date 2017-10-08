@@ -1,7 +1,7 @@
 {
   "name": "button-pwa",
   "version": "1.0.0",
-  "description": "test pwa",
+  "description": "pwa",
   "main": "scripts/app.js",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --hot --progress --host 0.0.0.0",
@@ -12,7 +12,7 @@
   "keywords": [
     "pwa"
   ],
-  "author": "",
+  "author": "Jenny Gebske <jennifer@gebske.de>",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
