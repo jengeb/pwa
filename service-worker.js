@@ -7,7 +7,7 @@ const filesToCache = [
   '/styles/inline.css'
 ];
 
-// self: (=! window) ServiceWorkerGlobalScope object
+// self: (not window) ServiceWorkerGlobalScope object
 self.addEventListener('install', e => {
   console.log('[ServiceWorker] Install');
   // wait for ServiceWorker when calls are asynchronous
@@ -39,8 +39,7 @@ self.addEventListener('activate', e => {
   return self.clients.claim();
 });
 
-// TODO which offline strategy to choose
-// getting cache or falling back to network
+// offline strategy: getting cache or falling back to network
 self.addEventListener('fetch', e => {
   console.log('[ServiceWorker] Fetch', e.request.url);
   e.respondWith(
