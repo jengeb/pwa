@@ -1,6 +1,5 @@
 'use strict';
 const cacheName = 'counterPWA-v1';
-const dataCacheName = 'counterData-v1';
 const filesToCache = [
   '/',
   '/index.html',
